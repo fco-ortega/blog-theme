@@ -21,9 +21,9 @@ add_action('init', 'fo_menus');
 
 function fo_register_styles() {
   $version = wp_get_theme()->get('Version');
-  wp_enqueue_style('fo-style', get_template_directory_uri() . "/style.css", array(), $version, 'all');
-  /* wp_enqueue_style('fo-bootstrap', get_template_directory_uri() . "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", array(), '1.0', 'all'); */
-  /* wp_enqueue_style('fo-fontawesome', get_template_directory_uri() . "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css", array(), '1.0', 'all'); */
+  wp_enqueue_style('fo-style', get_template_directory_uri() . "/style.css", array('fo-bootstrap'), $version, 'all');
+  wp_enqueue_style('fo-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", array(), '1.0', 'all');
+  wp_enqueue_style('fo-fontawesome', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css", array(), '1.0', 'all');
 }
 
 add_action('wp_enqueue_scripts', 'fo_register_styles');
@@ -51,10 +51,10 @@ function fo_widget_areas() {
   );
   register_sidebar(
     array(
-      'before_title' => '',
-      'after_title' => '',
-      'before_widget' => '',
-      'after_widget' => '',
+      'before_title' => '<h4>',
+      'after_title' => '</h4>',
+      'before_widget' => '<div class="col-md-auto">',
+      'after_widget' => '</div>',
       'name' => 'Footer Area',
       'id' => 'footer-1',
       'description' => 'Footer Widget Area'

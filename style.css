@@ -1,7 +1,7 @@
 /*
-Theme Name: Fortega Blog Theme
-Text Domain: Fortega
-Version: 1.1
+Theme Name: Blog Theme
+Text Domain: Blog Theme
+Version: 1.2
 Description: Tema para blog
 Tags: responsive
 Author: Francisco Ortega
@@ -23,7 +23,7 @@ Author URI: https://github.com/fco-ortega
   --white: #fff;
   --gray: #767575;
   --gray-dark: #434242;
-  --primary: #6f42c1;
+  --primary: #1d2671;
   --secondary: #4f4f4f;
   --success: #28a745;
   --info: #17a2b8;
@@ -58,7 +58,7 @@ html {
 }
 body {
   color: var(--secondary);
-  overflow-x: hidden
+  overflow-x: hidden;
 }
 a{
   color: var(--pink);
@@ -214,16 +214,31 @@ h6 {
 }
 
 .footer {
-  color: rgba(255, 255, 255, 0.7)
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .footer a {
   color: #fff
 }
+.footer h4 {
+  color: white;
+  margin-left: 40px;
+}
+.footer ul {
+  list-style: none;
+}
+.footer form {
+  margin-left: 40px;
+}
+
 .gradient{
   background: rgb(43,43,43);
   background: linear-gradient(151deg, var(--orange) 0%, var(--pink) 35%,var(--primary) 100%) !important;
 }
+.content {
+  min-height: 480px;
+}
+
 .content .post .title {
   font-size: 1.275rem
 }
@@ -277,16 +292,21 @@ h6 {
   display: none
 }
 
-.blog-nav .nav-link {
+.blog-nav a {
   background: var(--primary);
   color: #fff;
   font-size: 1rem;
   padding: 1rem;
   font-weight: bold;
-  position: relative
+  /* position: relative; */
+  flex-basis: 0;
+  flex-grow: 1;
+  text-align: center;
+  border-radius: .25rem !important;
+  margin: 2px;
 }
 
-.blog-nav .nav-link:hover {
+.blog-nav a:hover {
   background: var(--secondary);
 }
 

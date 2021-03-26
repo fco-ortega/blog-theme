@@ -10,11 +10,6 @@
   <meta name="author" content="https://youtube.com/FollowAndrew">
   <link rel="shortcut icon" href="images/logo.png">
 
-  <!-- FontAwesome CSS-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-  <!-- Bootstrap CSS-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <!-- Theme CSS -->
   <?php wp_head(); ?>
 
 </head>
@@ -22,7 +17,7 @@
 <body>
 
   <header class="header text-center">
-    <a class="site-title pt-lg-4 mb-0" href="index.html"><?php echo get_bloginfo('name'); ?></a>
+    <a class="site-title pt-lg-4 mb-0" href="<?php echo get_home_url(); ?>"><?php echo get_bloginfo('name'); ?></a>
 
     <nav class="navbar navbar-expand-lg navbar-dark">
 
