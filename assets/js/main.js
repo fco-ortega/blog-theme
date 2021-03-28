@@ -8,4 +8,13 @@ $(document).ready(function () {
 			$('.page-title').removeClass("sticky");
 		}
 	});
+
+	$('.home-slider').slick({
+		autoplay: true,
+		autoplaySpeed: 5000,
+		arrows: false,
+		dots: false,
+		pauseOnHover: false,
+		zIndex: -1
+	});
 });
