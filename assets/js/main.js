@@ -9,12 +9,4 @@ $(document).ready(function () {
 		}
 	});
 
-	$('.home-slider').slick({
-		autoplay: true,
-		autoplaySpeed: 5000,
-		arrows: false,
-		dots: false,
-		pauseOnHover: false,
-		zIndex: -1
-	});
 });

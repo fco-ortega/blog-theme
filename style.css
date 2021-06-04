@@ -108,18 +108,26 @@ h6 {
 }
 
 .header {
-  position: fixed;
+  /* position: fixed;
   left: 0;
   top: 0;
   height: 100vh;
-  width: var(--sidebar-width);
+  width: var(--sidebar-width); */
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
   background: var(--primary);
   color: #fff;
+  z-index: 100;
 }
 .header .site-title {
   color: var(--white);
   font-size: 1.2em;
   display: block;
+  padding: 20px;
+  align-self: center;
 }
 
 .header .btn-primary {
@@ -135,7 +143,7 @@ h6 {
 }
 
 .header .navbar {
-  padding: 2rem 1rem;
+  /* padding: 2rem 1rem; */
 }
 
 .header .navbar-dark .navbar-toggler {
@@ -155,6 +163,7 @@ h6 {
 
 .header .nav-item {
   font-weight: bold;
+  padding: 20px 10px;
 }
 
 .header .nav-item.active a {
@@ -174,7 +183,7 @@ h6 {
   color: rgba(0, 0, 0, 0.6);
 }
 .logo {
-  width: 78px;
+  width: 42px;
 }
 .social-list a {
   width: 32px;
@@ -193,7 +202,8 @@ h6 {
 }
 
 .main-wrapper {
-  margin-left: var(--sidebar-width);
+  /* margin-left: var(--sidebar-width); */
+  margin-top: 6.4em;
   background: #fff;
 }
 
@@ -201,18 +211,24 @@ h6 {
   max-width: var(--content-max-width);
 }
 .page-title {
-  position: sticky;
+  /* position: sticky;
   top: 0;
   z-index: 9999;
-  transition: all 0.2s;
+  transition: all 0.2s; */
 }
 .sticky {
-  padding: 1em 0 !important;
+  /* padding: 1em 0 !important; */
 }
 .page-title .heading {
   font-size: 2rem;
   font-weight: bold;
   color: white;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .footer {
@@ -397,17 +413,21 @@ h6 {
 
 /* Home slider */
 
-.home-slider-card {
-  outline: none;
+.carousel {
+  margin-top: -9em;
 }
-.home-slider-img {
-  min-height: 286px;
-  max-height: 576px;
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  min-height: 50vh;
+  max-height: 90vh;
 }
-.home-slider-overlay {
-  top: auto !important;
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
-  color: #ffffff !important;
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  padding: 15px;
 }
 
 /* Media queries */
@@ -439,10 +459,11 @@ h6 {
     width: 100%;
     position: absolute;
     left: 0;
-    top: 1.2rem;
+    top: 0.2rem;
     color: var(--white);
     font-size: 1.5em;
     display: block;
+    /* align-self: flex-start; */
   }
 
   .header .btn-primary {
@@ -453,8 +474,13 @@ h6 {
     padding: 1rem;
   }
 
+  .logo {
+    width: 32px;
+  }
+
   .main-wrapper {
     margin-left: 0;
+    margin-top: 0;
   }
 }
 
